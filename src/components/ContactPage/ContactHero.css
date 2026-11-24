@@ -1,0 +1,933 @@
+/* =========================================
+   CONTACT HERO
+========================================= */
+
+.contact-hero {
+  --navy: #030b19;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  width: 100%;
+  height: 97vh;
+  min-height: 650px;
+
+  color: #f7fbff;
+
+  background:
+    radial-gradient(
+      ellipse at 77% 47%,
+      rgba(0, 102, 255, 0.19),
+      transparent 36%
+    ),
+    radial-gradient(
+      ellipse at 16% 82%,
+      rgba(0, 191, 255, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      112deg,
+      #030b19 0%,
+      #06152b 53%,
+      #04132a 100%
+    );
+}
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.contact-hero-grid {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  pointer-events: none;
+  opacity: 0.2;
+
+  background-image:
+    linear-gradient(
+      rgba(54, 145, 255, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(54, 145, 255, 0.2) 1px,
+      transparent 1px
+    );
+
+  background-size: 54px 54px;
+
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 45%
+  );
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.contact-hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 64px));
+  height: 100%;
+  min-height: 0;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.04fr)
+    minmax(360px, 0.96fr);
+
+  align-items: center;
+
+  gap: clamp(24px, 3.5vw, 54px);
+
+  /* Less top and bottom padding */
+  padding: 8px 0 18px;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.contact-hero-copy {
+  max-width: 620px;
+  min-width: 0;
+
+  transform: translateY(-5px);
+}
+
+.contact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 18px;
+  padding: 8px 13px;
+
+  border: 1px solid rgba(17, 195, 255, 0.55);
+  border-radius: 999px;
+
+  color: #d8f7ff;
+  background: rgba(3, 35, 67, 0.6);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.105em;
+}
+
+.contact-eyebrow > span {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #12d8ff;
+
+  box-shadow:
+    0 0 0 4px rgba(18, 216, 255, 0.13),
+    0 0 15px rgba(18, 216, 255, 0.85);
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.contact-hero-copy h1 {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #f7fbff;
+
+  /* Slightly larger heading */
+  font-size: clamp(46px, 5.3vw, 72px);
+
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.052em;
+}
+
+.contact-hero-copy h1 span {
+  display: block;
+
+  color: #17c9f1;
+
+  text-shadow: 0 0 32px rgba(0, 180, 255, 0.16);
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.contact-hero-description {
+  max-width: 530px;
+
+  margin: 20px 0 0;
+
+  color: #c5d4e9;
+
+  /* Slightly larger body text */
+  font-size: clamp(16px, 1.35vw, 19px);
+
+  line-height: 1.75;
+}
+
+/* =========================================
+   TRUST POINTS
+========================================= */
+
+.contact-hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px 20px;
+
+  margin-top: 26px;
+}
+
+.contact-trust-item {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 125px;
+}
+
+.contact-trust-icon {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 46px;
+
+  width: 46px;
+  height: 46px;
+
+  border: 1px solid rgba(0, 177, 255, 0.78);
+  border-radius: 50%;
+
+  color: #eafaff;
+
+  background: linear-gradient(
+    145deg,
+    rgba(0, 114, 255, 0.26),
+    rgba(0, 209, 255, 0.07)
+  );
+
+  box-shadow:
+    inset 0 0 18px rgba(0, 150, 255, 0.12),
+    0 0 20px rgba(0, 133, 255, 0.1);
+}
+
+.contact-trust-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.contact-trust-text strong {
+  color: #f3f8ff;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.contact-trust-text small {
+  color: #a9bdd8;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   HERO LINK
+========================================= */
+
+.contact-hero-scroll {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 24px;
+
+  color: #64dfff;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  text-decoration: none;
+
+  transition:
+    color 0.18s ease,
+    gap 0.18s ease;
+}
+
+.contact-hero-scroll:hover {
+  gap: 12px;
+  color: #fff;
+}
+
+/* =========================================
+   RIGHT VISUAL
+========================================= */
+
+.contact-hero-visual {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  min-width: 0;
+  min-height: 0;
+
+  height: 100%;
+
+  /* Keep the animation inside the hero */
+  padding: 12px 0 28px;
+}
+
+/* Slightly larger cube scene */
+
+.contact-cube-scene {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  width: min(120%, 590px);
+  aspect-ratio: 1 / 0.92;
+
+  perspective: 1200px;
+  isolation: isolate;
+
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   CUBE GLOW
+========================================= */
+
+.contact-cube-glow {
+  position: absolute;
+
+  width: 70%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: rgba(0, 121, 255, 0.2);
+
+  filter: blur(65px);
+
+  animation: cubeGlowPulse 5.5s ease-in-out infinite;
+}
+
+/* =========================================
+   CUBE GROUP
+========================================= */
+
+.contact-cube-group {
+  position: relative;
+  z-index: 2;
+
+  width: 0;
+  height: 0;
+
+  transform-style: preserve-3d;
+
+  transform: rotateX(-27deg) rotateY(-36deg);
+
+  animation: cubeSlowTurn 14s linear infinite;
+}
+
+/* =========================================
+   INDIVIDUAL CUBE BLOCKS
+========================================= */
+
+.contact-cubelet {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 44px;
+  height: 44px;
+
+  transform-style: preserve-3d;
+
+  transform: translate3d(
+    var(--x),
+    var(--y),
+    var(--z)
+  );
+
+  animation: cubeExplodeReform 8.5s
+    cubic-bezier(0.65, 0, 0.35, 1) infinite;
+
+  animation-delay: var(--delay);
+}
+
+/* =========================================
+   CUBE FACES
+========================================= */
+
+.cube-face {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  border: 1px solid rgba(90, 220, 255, 0.82);
+
+  background: linear-gradient(
+    145deg,
+    rgba(20, 147, 255, 0.86),
+    rgba(2, 37, 91, 0.93)
+  );
+
+  box-shadow:
+    inset 0 0 15px rgba(88, 223, 255, 0.16),
+    0 0 8px rgba(0, 141, 255, 0.16);
+}
+
+.cube-front {
+  transform: translateZ(22px);
+}
+
+.cube-back {
+  transform: rotateY(180deg) translateZ(22px);
+  background: #06204a;
+}
+
+.cube-right {
+  transform: rotateY(90deg) translateZ(22px);
+
+  background: linear-gradient(
+    145deg,
+    #0877d8,
+    #031b44
+  );
+}
+
+.cube-left {
+  transform: rotateY(-90deg) translateZ(22px);
+  background: #074078;
+}
+
+.cube-top {
+  transform: rotateX(90deg) translateZ(22px);
+
+  background: linear-gradient(
+    145deg,
+    #65eaff,
+    #0877dd
+  );
+}
+
+.cube-bottom {
+  transform: rotateX(-90deg) translateZ(22px);
+  background: #03152f;
+}
+
+/* =========================================
+   ORBIT EFFECTS
+========================================= */
+
+.contact-cube-orbit {
+  position: absolute;
+  z-index: 1;
+
+  width: 90%;
+  height: 32%;
+
+  border: 1px solid rgba(0, 190, 255, 0.72);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 18px rgba(0, 153, 255, 0.14),
+    inset 0 0 15px rgba(0, 153, 255, 0.1);
+
+  transform: rotate(-23deg) rotateX(58deg);
+
+  animation: cubeOrbit 7s ease-in-out infinite;
+}
+
+.orbit-two {
+  width: 74%;
+  height: 48%;
+
+  border-color: rgba(31, 110, 255, 0.55);
+
+  transform: rotate(47deg) rotateX(65deg);
+
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+/* =========================================
+   FLOATING PARTICLES
+========================================= */
+
+.contact-cube-particle {
+  position: absolute;
+  z-index: 3;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #8cf4ff;
+
+  box-shadow: 0 0 13px 4px rgba(0, 190, 255, 0.58);
+
+  animation: cubeParticleFloat 4s ease-in-out infinite;
+}
+
+.particle-one {
+  top: 18%;
+  left: 16%;
+}
+
+.particle-two {
+  top: 22%;
+  right: 13%;
+
+  animation-delay: -1.5s;
+}
+
+.particle-three {
+  bottom: 17%;
+  left: 22%;
+
+  animation-delay: -2.4s;
+}
+
+/* =========================================
+   CUBE CAPTION
+========================================= */
+
+.contact-cube-caption {
+  position: absolute;
+  z-index: 4;
+
+  right: 1%;
+  bottom: 7%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px 15px;
+
+  border: 1px solid rgba(64, 174, 255, 0.38);
+  border-radius: 12px;
+
+  color: #d8f7ff;
+  background: rgba(4, 22, 47, 0.83);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  backdrop-filter: blur(12px);
+}
+
+.contact-cube-caption > span {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #12d8ff;
+
+  box-shadow:
+    0 0 0 4px rgba(18, 216, 255, 0.13),
+    0 0 15px rgba(18, 216, 255, 0.85);
+}
+
+/* =========================================
+   BOTTOM GLOW
+========================================= */
+
+.contact-hero-bottom-glow {
+  position: absolute;
+  z-index: -1;
+
+  right: -10%;
+  bottom: -110px;
+  left: -10%;
+
+  height: 180px;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 117, 255, 0.22),
+    transparent 68%
+  );
+
+  filter: blur(20px);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes cubeExplodeReform {
+  0%,
+  12%,
+  100% {
+    transform: translate3d(
+      var(--x),
+      var(--y),
+      var(--z)
+    ) rotateX(0) rotateY(0);
+  }
+
+  34%,
+  59% {
+    transform: translate3d(
+      calc(var(--x) + var(--dx)),
+      calc(var(--y) + var(--dy)),
+      calc(var(--z) + var(--dz))
+    ) rotateX(28deg) rotateY(38deg);
+  }
+
+  78% {
+    transform: translate3d(
+      calc(var(--x) + var(--dx) * 0.22),
+      calc(var(--y) + var(--dy) * 0.22),
+      calc(var(--z) + var(--dz) * 0.22)
+    ) rotateX(8deg) rotateY(10deg);
+  }
+}
+
+@keyframes cubeSlowTurn {
+  0% {
+    transform: rotateX(-27deg) rotateY(-36deg);
+  }
+
+  50% {
+    transform: rotateX(-20deg) rotateY(4deg) rotateZ(4deg);
+  }
+
+  100% {
+    transform: rotateX(-27deg) rotateY(-36deg);
+  }
+}
+
+@keyframes cubeOrbit {
+  0%,
+  100% {
+    transform: rotate(-23deg) rotateX(58deg) scale(0.96);
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: rotate(-12deg) rotateX(58deg) scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes cubeGlowPulse {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes cubeParticleFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: translate3d(8px, -16px, 0);
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 980px) {
+  .contact-hero {
+    height: auto;
+    min-height: 97vh;
+  }
+
+  .contact-hero-container {
+    width: min(calc(100% - 44px), 760px);
+
+    height: auto;
+    min-height: 97vh;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(260px, 0.8fr);
+
+    gap: 20px;
+
+    padding: 22px 0;
+  }
+
+  .contact-hero-copy {
+    transform: none;
+  }
+
+  .contact-hero-copy h1 {
+    font-size: clamp(42px, 5.8vw, 60px);
+  }
+
+  .contact-hero-visual {
+    min-height: 380px;
+    padding: 10px 0 20px;
+  }
+
+  .contact-cube-scene {
+    width: min(115%, 490px);
+  }
+
+  .contact-cubelet {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cube-front {
+    transform: translateZ(18px);
+  }
+
+  .cube-back {
+    transform: rotateY(180deg) translateZ(18px);
+  }
+
+  .cube-right {
+    transform: rotateY(90deg) translateZ(18px);
+  }
+
+  .cube-left {
+    transform: rotateY(-90deg) translateZ(18px);
+  }
+
+  .cube-top {
+    transform: rotateX(90deg) translateZ(18px);
+  }
+
+  .cube-bottom {
+    transform: rotateX(-90deg) translateZ(18px);
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 720px) {
+  .contact-hero {
+    height: auto;
+    min-height: 97vh;
+  }
+
+  .contact-hero-container {
+    width: min(calc(100% - 36px), 560px);
+
+    height: auto;
+    min-height: 97vh;
+
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    padding: 24px 0 12px;
+  }
+
+  .contact-hero-copy {
+    transform: none;
+  }
+
+  .contact-hero-copy h1 {
+    font-size: clamp(42px, 10vw, 60px);
+  }
+
+  .contact-hero-description {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .contact-hero-trust {
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .contact-trust-item {
+    min-width: calc(50% - 10px);
+  }
+
+  .contact-hero-scroll {
+    margin-top: 20px;
+  }
+
+  .contact-hero-visual {
+    height: auto;
+    min-height: 320px;
+
+    margin-top: 0;
+    padding: 8px 0 18px;
+  }
+
+  .contact-cube-scene {
+    width: min(100%, 440px);
+  }
+
+  .contact-cubelet {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cube-front {
+    transform: translateZ(16px);
+  }
+
+  .cube-back {
+    transform: rotateY(180deg) translateZ(16px);
+  }
+
+  .cube-right {
+    transform: rotateY(90deg) translateZ(16px);
+  }
+
+  .cube-left {
+    transform: rotateY(-90deg) translateZ(16px);
+  }
+
+  .cube-top {
+    transform: rotateX(90deg) translateZ(16px);
+  }
+
+  .cube-bottom {
+    transform: rotateX(-90deg) translateZ(16px);
+  }
+
+  .contact-cube-caption {
+    right: 0;
+    bottom: 3%;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+  .contact-hero-container {
+    width: calc(100% - 30px);
+    padding: 20px 0 10px;
+  }
+
+  .contact-hero-copy h1 {
+    font-size: 41px;
+  }
+
+  .contact-eyebrow {
+    margin-bottom: 15px;
+  }
+
+  .contact-hero-trust {
+    gap: 13px 8px;
+  }
+
+  .contact-trust-item {
+    min-width: calc(50% - 5px);
+    gap: 8px;
+  }
+
+  .contact-trust-icon {
+    width: 39px;
+    height: 39px;
+    flex-basis: 39px;
+  }
+
+  .contact-trust-text strong {
+    font-size: 11px;
+  }
+
+  .contact-trust-text small {
+    font-size: 10px;
+  }
+
+  .contact-hero-visual {
+    min-height: 275px;
+  }
+
+  .contact-cube-scene {
+    width: min(100%, 360px);
+  }
+
+  .contact-cubelet {
+    width: 27px;
+    height: 27px;
+  }
+
+  .cube-front {
+    transform: translateZ(13.5px);
+  }
+
+  .cube-back {
+    transform: rotateY(180deg) translateZ(13.5px);
+  }
+
+  .cube-right {
+    transform: rotateY(90deg) translateZ(13.5px);
+  }
+
+  .cube-left {
+    transform: rotateY(-90deg) translateZ(13.5px);
+  }
+
+  .cube-top {
+    transform: rotateX(90deg) translateZ(13.5px);
+  }
+
+  .cube-bottom {
+    transform: rotateX(-90deg) translateZ(13.5px);
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-hero *,
+  .contact-hero *::before,
+  .contact-hero *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

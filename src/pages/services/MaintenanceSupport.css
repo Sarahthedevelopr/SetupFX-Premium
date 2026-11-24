@@ -1,0 +1,2103 @@
+/* =========================================
+   MAINTENANCE & SUPPORT PAGE
+   Light Blue + White + Cyan Theme
+========================================= */
+
+.maintenance-page {
+  --ms-primary: #087fe8;
+  --ms-primary-dark: #0865c4;
+  --ms-cyan: #12c8e8;
+  --ms-text: #142d4c;
+  --ms-muted: #647b96;
+  --ms-border: rgba(35, 116, 190, 0.14);
+
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: var(--ms-text);
+  font-family: inherit;
+}
+
+.maintenance-page * {
+  box-sizing: border-box;
+}
+
+.maintenance-page a {
+  text-decoration: none;
+}
+
+.maintenance-container {
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.maintenance-section-spacing {
+  padding: 100px 0;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.maintenance-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  padding: 90px 0;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 83% 18%,
+      rgba(26, 199, 244, 0.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 8% 80%,
+      rgba(82, 167, 255, 0.11),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f3faff 48%,
+      #eaf7ff 100%
+    );
+}
+
+.maintenance-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.32;
+  background-image: radial-gradient(
+    rgba(8, 127, 232, 0.32) 0.8px,
+    transparent 0.8px
+  );
+  background-size: 26px 26px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 45%,
+    black 85%,
+    transparent
+  );
+}
+
+.maintenance-hero-glow {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.maintenance-glow-one {
+  width: 300px;
+  height: 300px;
+  top: -130px;
+  right: 17%;
+  background: rgba(44, 198, 243, 0.13);
+}
+
+.maintenance-glow-two {
+  width: 240px;
+  height: 240px;
+  bottom: -140px;
+  left: 38%;
+  background: rgba(64, 146, 255, 0.1);
+}
+
+.maintenance-hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.03fr 0.97fr;
+  align-items: center;
+  gap: 42px;
+}
+
+.maintenance-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.maintenance-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 10px 15px;
+  border: 1px solid rgba(8, 127, 232, 0.15);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ms-primary-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  box-shadow: 0 5px 20px rgba(31, 112, 190, 0.05);
+}
+
+.maintenance-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ms-cyan);
+  box-shadow: 0 0 12px rgba(18, 200, 232, 0.65);
+}
+
+.maintenance-hero-content h1 {
+  max-width: 650px;
+  margin: 0;
+  color: #122b49;
+  font-size: clamp(42px, 4.3vw, 59px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.maintenance-hero-content h1 span {
+  display: block;
+  color: var(--ms-primary);
+  background: linear-gradient(
+    100deg,
+    #087fe8 0%,
+    #0ba7dc 55%,
+    #13c8e8 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.maintenance-hero-description {
+  max-width: 535px;
+  margin: 23px 0 25px;
+  color: #5f7691;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.maintenance-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.maintenance-hero-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 11px;
+  border: 1px solid rgba(8, 127, 232, 0.13);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #385777;
+  font-size: 11px;
+  font-weight: 650;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.maintenance-hero-tags span svg {
+  color: var(--ms-primary);
+}
+
+.maintenance-hero-tags span:hover {
+  transform: translateY(-3px);
+  border-color: rgba(8, 127, 232, 0.4);
+}
+
+.maintenance-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.maintenance-btn {
+  min-height: 52px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  padding: 0 21px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 750;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.maintenance-btn:hover {
+  transform: translateY(-3px);
+}
+
+.maintenance-btn-primary {
+  color: #ffffff;
+  background: linear-gradient(105deg, #087fe8, #0caedc);
+  box-shadow: 0 10px 24px rgba(8, 127, 232, 0.19);
+}
+
+.maintenance-btn-primary:hover {
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(8, 127, 232, 0.27);
+}
+
+.maintenance-btn-secondary {
+  border-color: rgba(8, 127, 232, 0.2);
+  color: #1b4e7b;
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.maintenance-btn-secondary:hover {
+  border-color: rgba(8, 127, 232, 0.45);
+  background: #ffffff;
+}
+
+.maintenance-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 24px;
+  color: #617a96;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.maintenance-hero-note svg {
+  flex-shrink: 0;
+  color: #08a7a0;
+}
+
+.maintenance-hero-bottom-line {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(8, 127, 232, 0.24),
+    transparent
+  );
+}
+
+/* =========================================
+   HERO DASHBOARD VISUAL
+========================================= */
+
+.maintenance-visual {
+  position: relative;
+  min-width: 0;
+  padding: 20px 0;
+}
+
+.maintenance-visual-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(10, 157, 224, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.maintenance-orbit-one {
+  width: 460px;
+  height: 460px;
+}
+
+.maintenance-orbit-two {
+  width: 370px;
+  height: 370px;
+  border-style: dashed;
+  animation: maintenance-orbit-rotate 45s linear infinite;
+}
+
+@keyframes maintenance-orbit-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.maintenance-dashboard {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 485px;
+  margin: 0 auto;
+  padding: 22px;
+  border: 1px solid rgba(51, 144, 211, 0.2);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 30px 80px rgba(40, 105, 162, 0.12),
+    0 6px 20px rgba(35, 123, 188, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+.maintenance-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e9f1f8;
+}
+
+.maintenance-dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.maintenance-brand-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e2f5ff, #d2f0ff);
+  color: #087fe8;
+}
+
+.maintenance-dashboard-brand > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.maintenance-dashboard-brand strong {
+  color: #204360;
+  font-size: 13px;
+}
+
+.maintenance-dashboard-brand span {
+  color: #8297aa;
+  font-size: 10px;
+}
+
+.maintenance-dashboard-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid #e7f0f7;
+  border-radius: 9px;
+  background: #ffffff;
+  cursor: default;
+}
+
+.maintenance-dashboard-menu span {
+  width: 15px;
+  height: 2px;
+  border-radius: 3px;
+  background: #7390a8;
+}
+
+.maintenance-dashboard-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 21px 0 17px;
+}
+
+.maintenance-dashboard-welcome > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.maintenance-dashboard-welcome > div:first-child span {
+  color: #7b93a9;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.maintenance-dashboard-welcome h3 {
+  margin: 0;
+  color: #1b3d5a;
+  font-size: 17px;
+}
+
+.maintenance-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 9px;
+  border: 1px solid #d7edf9;
+  border-radius: 20px;
+  background: #f2faff;
+  color: #267bb5;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.maintenance-status-pill span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0ca7df;
+}
+
+.maintenance-status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.maintenance-status-card {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e3eff8;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fbfdff, #f3faff);
+}
+
+.maintenance-status-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 14px;
+  color: #6f879e;
+  font-size: 10px;
+}
+
+.maintenance-status-card-top svg {
+  color: #087fe8;
+}
+
+.maintenance-status-card > strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #1f496a;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.maintenance-status-card > small {
+  display: block;
+  margin-top: 9px;
+  color: #879bad;
+  font-size: 9px;
+}
+
+.maintenance-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.maintenance-status-indicator span {
+  width: 13px;
+  height: 5px;
+  border-radius: 5px;
+  background: #13b8b1;
+  animation: maintenance-pulse 1.8s ease-in-out infinite;
+}
+
+.maintenance-status-indicator span:nth-child(2n) {
+  animation-delay: 0.3s;
+}
+
+.maintenance-status-indicator span:nth-child(3n) {
+  animation-delay: 0.6s;
+}
+
+@keyframes maintenance-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.maintenance-update-track {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e1eef7;
+}
+
+.maintenance-update-track span {
+  display: block;
+  width: 65%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #087fe8, #12c8e8);
+}
+
+.maintenance-dashboard-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 23px 0 12px;
+}
+
+.maintenance-dashboard-section-title strong {
+  color: #264762;
+  font-size: 11px;
+}
+
+.maintenance-dashboard-section-title > span {
+  color: #8ba0b3;
+  font-size: 9px;
+}
+
+.maintenance-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.maintenance-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #edf3f8;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.maintenance-activity-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.maintenance-icon-blue {
+  background: #e9f5ff;
+  color: #087fe8;
+}
+
+.maintenance-icon-cyan {
+  background: #e5fbff;
+  color: #0799b9;
+}
+
+.maintenance-icon-purple {
+  background: #f0edff;
+  color: #7766d9;
+}
+
+.maintenance-activity-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.maintenance-activity-copy strong {
+  overflow: hidden;
+  color: #34536e;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.maintenance-activity-copy span {
+  color: #8a9eb0;
+  font-size: 9px;
+}
+
+.maintenance-activity-state {
+  padding: 5px 7px;
+  border-radius: 5px;
+  background: #f1f8ff;
+  color: #3479ac;
+  font-size: 8px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.maintenance-dashboard-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 13px 11px;
+  border: 1px solid #e4f2fb;
+  border-radius: 11px;
+  background: linear-gradient(110deg, #f4fbff, #ffffff);
+}
+
+.maintenance-footer-check {
+  display: flex;
+  flex-shrink: 0;
+  color: #08a68a;
+}
+
+.maintenance-dashboard-footer > div:nth-child(2) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.maintenance-dashboard-footer strong {
+  color: #234664;
+  font-size: 10px;
+}
+
+.maintenance-dashboard-footer > div:nth-child(2) span {
+  color: #8095aa;
+  font-size: 9px;
+}
+
+.maintenance-dashboard-footer > svg {
+  flex-shrink: 0;
+  color: #0a94db;
+}
+
+.maintenance-floating-card {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid rgba(48, 141, 204, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 13px 30px rgba(31, 99, 152, 0.13);
+  animation: maintenance-float 4.5s ease-in-out infinite;
+}
+
+.maintenance-floating-top {
+  top: 0;
+  right: -8px;
+}
+
+.maintenance-floating-bottom {
+  bottom: 6px;
+  left: -15px;
+  animation-delay: -2s;
+}
+
+@keyframes maintenance-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.maintenance-floating-icon {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+  background: #e6f5ff;
+  color: #087fe8;
+}
+
+.maintenance-floating-green {
+  background: #e6fff2;
+  color: #0ba96d;
+}
+
+.maintenance-floating-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.maintenance-floating-card strong {
+  color: #214463;
+  font-size: 11px;
+}
+
+.maintenance-floating-card > div:last-child span {
+  color: #7b93aa;
+  font-size: 9px;
+}
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.maintenance-section-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #0786d7;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.maintenance-section-heading {
+  max-width: 730px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.maintenance-section-heading h2,
+.maintenance-overview-heading h2,
+.maintenance-benefits-intro h2 {
+  margin: 0;
+  color: #173452;
+  font-size: clamp(32px, 3.3vw, 44px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.3px;
+}
+
+.maintenance-section-heading h2 span,
+.maintenance-overview-heading h2 span,
+.maintenance-benefits-intro h2 span {
+  color: #0788df;
+}
+
+.maintenance-section-heading > p {
+  max-width: 650px;
+  margin: 17px auto 0;
+  color: var(--ms-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =========================================
+   OVERVIEW
+========================================= */
+
+.maintenance-overview {
+  background: #ffffff;
+}
+
+.maintenance-overview-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+  gap: 90px;
+}
+
+.maintenance-overview-heading {
+  position: sticky;
+  top: 120px;
+}
+
+.maintenance-overview-heading h2 {
+  max-width: 440px;
+}
+
+.maintenance-overview-copy > p {
+  margin: 0 0 17px;
+  color: #647b94;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.maintenance-overview-highlight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 28px;
+  padding: 19px;
+  border: 1px solid #dceefa;
+  border-radius: 15px;
+  background: linear-gradient(110deg, #f2faff, #ffffff);
+}
+
+.maintenance-highlight-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #dff4ff, #c9efff);
+  color: #087fe8;
+}
+
+.maintenance-overview-highlight > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.maintenance-overview-highlight strong {
+  color: #244a6b;
+  font-size: 13px;
+}
+
+.maintenance-overview-highlight span {
+  color: #7890a7;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   SUPPORT SERVICE CARDS
+========================================= */
+
+.maintenance-scope {
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 5% 10%,
+      rgba(43, 178, 239, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #f5faff 0%, #edf7ff 100%);
+}
+
+.maintenance-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.maintenance-service-card {
+  position: relative;
+  min-width: 0;
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  overflow: hidden;
+  border: 1px solid rgba(48, 126, 184, 0.13);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 25px rgba(38, 105, 159, 0.035);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.maintenance-service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 45px;
+  height: 3px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(90deg, #087fe8, #12c8e8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.maintenance-service-card:hover {
+  border-color: rgba(8, 127, 232, 0.29);
+  box-shadow: 0 18px 40px rgba(38, 105, 159, 0.1);
+}
+
+.maintenance-service-card:hover::before {
+  opacity: 1;
+}
+
+.maintenance-service-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.maintenance-service-icon {
+  width: 53px;
+  height: 53px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d8efff;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #effaff, #e1f5ff);
+  color: #0786de;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.maintenance-service-card:hover .maintenance-service-icon {
+  transform: translateY(-3px);
+  color: #ffffff;
+  background: linear-gradient(135deg, #087fe8, #10badf);
+}
+
+.maintenance-service-card-top > span {
+  color: #b0c7da;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.maintenance-service-card h3 {
+  margin: 0 0 11px;
+  color: #1c3d5c;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.maintenance-service-description {
+  margin: 0;
+  color: #6b8197;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.maintenance-service-divider {
+  height: 1px;
+  margin: 19px 0 16px;
+  background: #edf3f8;
+}
+
+.maintenance-service-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 21px;
+}
+
+.maintenance-service-points > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #5f7891;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.maintenance-service-points svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #0aab9a;
+}
+
+.maintenance-service-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #edf3f8;
+  color: #087fe8;
+}
+
+.maintenance-service-bottom span {
+  color: #7690a8;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.maintenance-service-bottom svg {
+  transition: transform 0.25s ease;
+}
+
+.maintenance-service-card:hover .maintenance-service-bottom svg {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   SUPPORT PROCESS
+========================================= */
+
+.maintenance-process {
+  background: #ffffff;
+}
+
+.maintenance-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.maintenance-process-card {
+  position: relative;
+  min-width: 0;
+  padding: 24px 20px 25px;
+  border: 1px solid #e0edf7;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #ffffff, #f7fbff);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.maintenance-process-card:hover {
+  transform: translateY(-5px);
+  border-color: #a9daf8;
+  box-shadow: 0 15px 30px rgba(34, 110, 169, 0.08);
+}
+
+.maintenance-process-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.maintenance-process-number {
+  color: #a3bfd5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.maintenance-process-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d8efff;
+  border-radius: 13px;
+  background: #eaf8ff;
+  color: #087fe8;
+}
+
+.maintenance-process-card h3 {
+  margin: 0 0 12px;
+  color: #204360;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.maintenance-process-card > p {
+  margin: 0;
+  color: #72869b;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.maintenance-process-connector {
+  position: absolute;
+  z-index: 2;
+  top: 43px;
+  right: -20px;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d8ebf8;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0786de;
+}
+
+.maintenance-process-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 900px;
+  margin: 30px auto 0;
+  padding: 19px 21px;
+  border: 1px solid #dceefa;
+  border-radius: 13px;
+  background: linear-gradient(110deg, #f2faff, #ffffff);
+  color: #087fe8;
+}
+
+.maintenance-process-note > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.maintenance-process-note p {
+  margin: 0;
+  color: #647d94;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.maintenance-process-note strong {
+  color: #214664;
+}
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.maintenance-benefits {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(37, 181, 239, 0.09),
+      transparent 32%
+    ),
+    #f5faff;
+}
+
+.maintenance-benefits-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.maintenance-benefits-intro h2 {
+  max-width: 460px;
+  font-size: clamp(32px, 3.2vw, 42px);
+}
+
+.maintenance-benefits-intro > p {
+  margin: 20px 0 25px;
+  color: #687f96;
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+.maintenance-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #087fe8;
+  font-size: 13px;
+  font-weight: 800;
+  transition: gap 0.25s ease;
+}
+
+.maintenance-text-link:hover {
+  gap: 15px;
+}
+
+.maintenance-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.maintenance-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 19px;
+  border: 1px solid #e0edf7;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 18px rgba(38, 105, 159, 0.025);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.maintenance-benefit-item:hover {
+  transform: translateX(5px);
+  border-color: #b8dff8;
+  box-shadow: 0 10px 25px rgba(38, 105, 159, 0.07);
+}
+
+.maintenance-benefit-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #e9f8ff, #d8f1ff);
+  color: #0786de;
+}
+
+.maintenance-benefit-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.maintenance-benefit-copy h3 {
+  margin: 0 0 7px;
+  color: #244866;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.maintenance-benefit-copy p {
+  margin: 0;
+  color: #71869b;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.maintenance-benefit-check {
+  flex-shrink: 0;
+  color: #0aaf87;
+}
+
+/* =========================================
+   CONTACT CTA
+========================================= */
+
+.maintenance-contact-section {
+  padding: 85px 0;
+  background: #ffffff;
+}
+
+.maintenance-contact-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  min-height: 390px;
+  padding: 56px 58px;
+  overflow: hidden;
+  border: 1px solid rgba(8, 127, 232, 0.14);
+  border-radius: 25px;
+  background:
+    radial-gradient(
+      circle at 88% 45%,
+      rgba(46, 204, 244, 0.22),
+      transparent 30%
+    ),
+    linear-gradient(
+      115deg,
+      #eaf7ff 0%,
+      #f6fbff 54%,
+      #e7f8ff 100%
+    );
+  box-shadow: 0 20px 60px rgba(35, 110, 169, 0.07);
+}
+
+.maintenance-contact-decoration {
+  position: absolute;
+  border: 1px solid rgba(8, 127, 232, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.maintenance-decoration-one {
+  width: 400px;
+  height: 400px;
+  top: -250px;
+  right: 5%;
+}
+
+.maintenance-decoration-two {
+  width: 270px;
+  height: 270px;
+  right: -120px;
+  bottom: -190px;
+}
+
+.maintenance-contact-content {
+  position: relative;
+  z-index: 2;
+  max-width: 570px;
+}
+
+.maintenance-contact-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #087fd4;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.maintenance-contact-content h2 {
+  max-width: 560px;
+  margin: 0;
+  color: #163755;
+  font-size: clamp(32px, 3.3vw, 44px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+}
+
+.maintenance-contact-content h2 span {
+  display: block;
+  color: #0788df;
+}
+
+.maintenance-contact-content > p {
+  max-width: 515px;
+  margin: 18px 0 25px;
+  color: #647c94;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.maintenance-contact-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.maintenance-btn-white {
+  color: #ffffff;
+  background: linear-gradient(105deg, #087fe8, #0caedc);
+  box-shadow: 0 10px 24px rgba(8, 127, 232, 0.17);
+}
+
+.maintenance-btn-white:hover {
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(8, 127, 232, 0.25);
+}
+
+.maintenance-contact-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #23608e;
+  font-size: 12px;
+  font-weight: 800;
+  transition: color 0.25s ease;
+}
+
+.maintenance-contact-secondary:hover {
+  color: #087fe8;
+}
+
+.maintenance-contact-reassurance {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 21px;
+  color: #6d879e;
+  font-size: 11px;
+}
+
+.maintenance-contact-reassurance svg {
+  color: #0aaf87;
+}
+
+/* CONTACT VISUAL */
+
+.maintenance-contact-visual {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  justify-self: center;
+}
+
+.maintenance-contact-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(8, 127, 232, 0.18);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.maintenance-contact-orbit-one {
+  width: 250px;
+  height: 250px;
+}
+
+.maintenance-contact-orbit-two {
+  width: 175px;
+  height: 175px;
+  border-style: dashed;
+  animation: maintenance-orbit-rotate 35s linear infinite;
+}
+
+.maintenance-contact-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(8, 127, 232, 0.2);
+  border-radius: 24px;
+  background: linear-gradient(145deg, #ffffff, #dcf4ff);
+  color: #087fe8;
+  box-shadow: 0 12px 35px rgba(8, 127, 232, 0.14);
+  transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+.maintenance-contact-node {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d7ebf8;
+  border-radius: 15px;
+  background: #ffffff;
+  color: #087fe8;
+  box-shadow: 0 10px 25px rgba(37, 105, 157, 0.1);
+}
+
+.maintenance-node-one {
+  top: 17px;
+  left: 37px;
+}
+
+.maintenance-node-two {
+  top: 17px;
+  right: 37px;
+  color: #08a6a1;
+}
+
+.maintenance-node-three {
+  bottom: 17px;
+  left: 37px;
+  color: #0797dd;
+}
+
+.maintenance-node-four {
+  right: 37px;
+  bottom: 17px;
+  color: #5370d6;
+}
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.maintenance-final-cta {
+  padding: 65px 0;
+  border-top: 1px solid #e9f2f9;
+  background: linear-gradient(105deg, #ffffff, #f2f9ff);
+}
+
+.maintenance-final-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.maintenance-final-cta-inner > div {
+  max-width: 690px;
+}
+
+.maintenance-final-cta-inner .maintenance-section-label {
+  margin-bottom: 10px;
+}
+
+.maintenance-final-cta-inner h2 {
+  margin: 0;
+  color: #183956;
+  font-size: clamp(25px, 2.8vw, 34px);
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.maintenance-final-cta-inner p {
+  margin: 10px 0 0;
+  color: #6c8298;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   RESPONSIVE: LAPTOP
+========================================= */
+
+@media (max-width: 1100px) {
+  .maintenance-hero-grid {
+    gap: 25px;
+  }
+
+  .maintenance-hero-content h1 {
+    font-size: clamp(40px, 4.5vw, 52px);
+  }
+
+  .maintenance-floating-top {
+    right: -4px;
+  }
+
+  .maintenance-floating-bottom {
+    left: -4px;
+  }
+
+  .maintenance-overview-grid {
+    gap: 55px;
+  }
+
+  .maintenance-benefits-grid {
+    gap: 50px;
+  }
+
+  .maintenance-contact-card {
+    padding: 45px 38px;
+  }
+
+  .maintenance-contact-visual {
+    transform: scale(0.9);
+  }
+}
+
+/* =========================================
+   RESPONSIVE: TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .maintenance-section-spacing {
+    padding: 80px 0;
+  }
+
+  .maintenance-hero {
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  .maintenance-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  .maintenance-hero-content {
+    max-width: 720px;
+  }
+
+  .maintenance-hero-content h1 {
+    max-width: 700px;
+    font-size: clamp(43px, 6vw, 59px);
+  }
+
+  .maintenance-hero-description {
+    max-width: 650px;
+  }
+
+  .maintenance-visual {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .maintenance-dashboard {
+    max-width: 485px;
+  }
+
+  .maintenance-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .maintenance-overview-heading {
+    position: static;
+  }
+
+  .maintenance-overview-heading h2 {
+    max-width: 620px;
+  }
+
+  .maintenance-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .maintenance-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .maintenance-process-connector {
+    display: none;
+  }
+
+  .maintenance-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .maintenance-benefits-intro h2 {
+    max-width: 650px;
+  }
+
+  .maintenance-contact-card {
+    grid-template-columns: 1fr 0.7fr;
+    padding: 42px 30px;
+  }
+
+  .maintenance-contact-visual {
+    transform: scale(0.8);
+  }
+}
+
+/* =========================================
+   RESPONSIVE: MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .maintenance-container {
+    width: calc(100% - 36px);
+  }
+
+  .maintenance-section-spacing {
+    padding: 65px 0;
+  }
+
+  .maintenance-hero {
+    padding: 63px 0 70px;
+  }
+
+  .maintenance-hero-grid {
+    gap: 45px;
+  }
+
+  .maintenance-eyebrow {
+    margin-bottom: 20px;
+    padding: 9px 12px;
+    font-size: 9px;
+    letter-spacing: 1.1px;
+  }
+
+  .maintenance-hero-content h1 {
+    font-size: clamp(35px, 9vw, 46px);
+    line-height: 1.14;
+    letter-spacing: -1.5px;
+  }
+
+  .maintenance-hero-description {
+    margin: 19px 0 21px;
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .maintenance-hero-tags {
+    gap: 7px;
+  }
+
+  .maintenance-hero-tags span {
+    padding: 8px 9px;
+    font-size: 10px;
+  }
+
+  .maintenance-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .maintenance-btn {
+    width: 100%;
+    min-height: 49px;
+    padding: 0 15px;
+    font-size: 12px;
+  }
+
+  .maintenance-hero-note {
+    align-items: flex-start;
+    font-size: 10px;
+  }
+
+  .maintenance-visual {
+    padding: 0;
+  }
+
+  .maintenance-visual-orbit {
+    display: none;
+  }
+
+  .maintenance-dashboard {
+    padding: 16px 12px;
+    border-radius: 17px;
+  }
+
+  .maintenance-dashboard-header {
+    padding-bottom: 14px;
+  }
+
+  .maintenance-brand-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .maintenance-dashboard-brand strong {
+    font-size: 11px;
+  }
+
+  .maintenance-dashboard-brand span {
+    font-size: 9px;
+  }
+
+  .maintenance-dashboard-welcome {
+    margin: 18px 0 14px;
+  }
+
+  .maintenance-dashboard-welcome h3 {
+    font-size: 14px;
+  }
+
+  .maintenance-dashboard-welcome > div:first-child span {
+    font-size: 8px;
+  }
+
+  .maintenance-status-pill {
+    padding: 6px 7px;
+    font-size: 8px;
+  }
+
+  .maintenance-status-grid {
+    gap: 8px;
+  }
+
+  .maintenance-status-card {
+    padding: 10px;
+  }
+
+  .maintenance-status-card-top {
+    font-size: 9px;
+  }
+
+  .maintenance-status-card > strong {
+    font-size: 15px;
+  }
+
+  .maintenance-status-indicator {
+    gap: 3px;
+  }
+
+  .maintenance-status-indicator span {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .maintenance-status-card > small {
+    font-size: 8px;
+  }
+
+  .maintenance-dashboard-section-title strong {
+    font-size: 10px;
+  }
+
+  .maintenance-dashboard-section-title > span {
+    font-size: 8px;
+  }
+
+  .maintenance-activity-item {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .maintenance-activity-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .maintenance-activity-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .maintenance-activity-copy strong {
+    font-size: 9px;
+  }
+
+  .maintenance-activity-copy span {
+    font-size: 8px;
+  }
+
+  .maintenance-activity-state {
+    padding: 4px 5px;
+    font-size: 7px;
+  }
+
+  .maintenance-dashboard-footer {
+    gap: 8px;
+    padding: 11px 8px;
+  }
+
+  .maintenance-dashboard-footer strong {
+    font-size: 9px;
+  }
+
+  .maintenance-dashboard-footer > div:nth-child(2) span {
+    font-size: 8px;
+  }
+
+  .maintenance-floating-card {
+    display: none;
+  }
+
+  .maintenance-section-heading {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .maintenance-section-label {
+    margin-bottom: 12px;
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .maintenance-section-heading h2,
+  .maintenance-overview-heading h2,
+  .maintenance-benefits-intro h2 {
+    font-size: clamp(29px, 7.5vw, 36px);
+    letter-spacing: -0.9px;
+  }
+
+  .maintenance-section-heading > p {
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .maintenance-overview-copy > p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .maintenance-overview-highlight {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .maintenance-highlight-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .maintenance-overview-highlight strong {
+    font-size: 11px;
+  }
+
+  .maintenance-overview-highlight span {
+    font-size: 10px;
+  }
+
+  .maintenance-services-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .maintenance-service-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .maintenance-service-card-top {
+    margin-bottom: 18px;
+  }
+
+  .maintenance-service-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .maintenance-service-card h3 {
+    font-size: 17px;
+  }
+
+  .maintenance-service-description {
+    font-size: 12px;
+  }
+
+  .maintenance-service-points > div {
+    font-size: 11px;
+  }
+
+  .maintenance-process-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .maintenance-process-card {
+    padding: 21px;
+  }
+
+  .maintenance-process-card-top {
+    margin-bottom: 17px;
+  }
+
+  .maintenance-process-card h3 {
+    font-size: 14px;
+  }
+
+  .maintenance-process-card > p {
+    font-size: 11px;
+  }
+
+  .maintenance-process-note {
+    gap: 9px;
+    margin-top: 22px;
+    padding: 15px;
+  }
+
+  .maintenance-process-note p {
+    font-size: 11px;
+  }
+
+  .maintenance-benefits-intro > p {
+    font-size: 12px;
+  }
+
+  .maintenance-benefit-item {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .maintenance-benefit-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .maintenance-benefit-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .maintenance-benefit-copy h3 {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .maintenance-benefit-copy p {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+
+  .maintenance-benefit-check {
+    width: 16px;
+    height: 16px;
+  }
+
+  .maintenance-contact-section {
+    padding: 60px 0;
+  }
+
+  .maintenance-contact-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 30px 21px 25px;
+    border-radius: 19px;
+  }
+
+  .maintenance-contact-content h2 {
+    font-size: clamp(30px, 8vw, 37px);
+    letter-spacing: -1px;
+  }
+
+  .maintenance-contact-content > p {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .maintenance-contact-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .maintenance-contact-secondary {
+    justify-content: center;
+    min-height: 35px;
+  }
+
+  .maintenance-contact-reassurance {
+    font-size: 10px;
+  }
+
+  .maintenance-contact-visual {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+    transform: scale(0.9);
+  }
+
+  .maintenance-contact-orbit-one {
+    width: 210px;
+    height: 210px;
+  }
+
+  .maintenance-contact-orbit-two {
+    width: 145px;
+    height: 145px;
+  }
+
+  .maintenance-contact-center {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+  }
+
+  .maintenance-contact-center svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .maintenance-contact-node {
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+  }
+
+  .maintenance-contact-node svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .maintenance-node-one,
+  .maintenance-node-three {
+    left: 10px;
+  }
+
+  .maintenance-node-two,
+  .maintenance-node-four {
+    right: 10px;
+  }
+
+  .maintenance-node-one,
+  .maintenance-node-two {
+    top: 8px;
+  }
+
+  .maintenance-node-three,
+  .maintenance-node-four {
+    bottom: 8px;
+  }
+
+  .maintenance-final-cta {
+    padding: 48px 0;
+  }
+
+  .maintenance-final-cta-inner {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .maintenance-final-cta-inner h2 {
+    font-size: 27px;
+    letter-spacing: -0.6px;
+  }
+
+  .maintenance-final-cta-inner p {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .maintenance-page *,
+  .maintenance-page *::before,
+  .maintenance-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
